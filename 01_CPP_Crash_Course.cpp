@@ -21,9 +21,16 @@ int main()
         println("data1.value = {}", data1.value());
    }
     if (!data2) {
-        println("data2 has no value.");
-        println("data2.value = {} [default]", data2.value_or(0));
+        println("data2 has no value."); 
     }
-    return 0;
+    try
+    {
+        println("data2.value = {}", data2.value());
+    }
+    catch (const bad_optional_access& ex)
+    {
+        println("Exception: {}", ex.what());
+    }
+    println("data2.value = {}", data2.value_or(0));
 }
 
