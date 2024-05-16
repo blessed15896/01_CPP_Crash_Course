@@ -18,5 +18,6 @@ int main()
     int b{ sum({10,20,30,40,50,60}) };
     println("a = {}", a);
     println("b = {}", b);
+    // int c{ sum(1,2,3.0) }; // Error
 }
 
