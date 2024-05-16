@@ -1,4 +1,5 @@
 #include <print>;
+#include <array>;
 
 using namespace std;
 
@@ -24,10 +25,16 @@ int main()
     }
     println("\nThe for loop");
     {
-        // The for loop
         for (int i{0}; i < 5; i++)
         {
             println("This is silly");
+        }
+    }
+    println("\nThe range-based for loop");
+    {
+        array arr{ 1,2,3,4 };
+        for (int i : arr) {
+            println("{}", i);
         }
     }
 }
