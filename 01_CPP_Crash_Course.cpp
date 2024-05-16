@@ -1,11 +1,15 @@
-#include <print>;
+#include <print>
+
+import AirlineTicket;
 
 using namespace std;
 
 int main()
 {
-	string myString{ "Hello, World" };
-	println("The value of myString is {}", myString);
-	println("The second letter is {}", myString[1]);
+	AirlineTicketT myTicket;
+	myTicket.setPassengerName("Blessed Sibanda");
+	myTicket.setNumberOfMiles(700);
+	double cost{ myTicket.calculatePriceInDollars() };
+	println("The ticket will cost ${}", cost);
 }
 
