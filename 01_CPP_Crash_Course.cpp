@@ -19,5 +19,12 @@ int main()
         auto [x, y, z] { point };
         println("x = {}, y = {}, z = {}\n", x, y, z);
     }
+    {
+        // Structured bindings with std::pair.
+        pair myPair{ "hello", 5 };
+        auto [theString, theInt] { myPair };
+        println("theString: {}", theString);
+        println("theInt: {}", theInt);
+    }
 }
 
