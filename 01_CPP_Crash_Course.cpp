@@ -37,5 +37,11 @@ int main()
             println("{}", i);
         }
     }
+    println("\nThe range-based for loop with initializer");
+    {
+        for (array arr{ 1,2,3,4 }; int i : arr) {
+            println("{}", i);
+        }
+    }
 }
 
