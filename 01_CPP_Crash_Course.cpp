@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-	AirlineTicketT myTicket;
+	AirlineTicket myTicket;
 	myTicket.setPassengerName("Blessed Sibanda");
 	myTicket.setNumberOfMiles(700);
 	double cost{ myTicket.calculatePriceInDollars() };

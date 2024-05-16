@@ -2,10 +2,10 @@
 
 export module AirlineTicket;
 
-export class AirlineTicketT
+export class AirlineTicket
 {
 public:
-	AirlineTicketT() {}
+	AirlineTicket() {}
 
 	double calculatePriceInDollars()
 	{
