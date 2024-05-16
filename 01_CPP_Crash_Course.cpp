@@ -1,36 +1,15 @@
-#include <optional>;
 #include <print>;
+#include <array>;
 
 using namespace std;
 
-optional<int> getData(bool giveIt)
-{
-    if (giveIt) {
-        return 42;
-    }
-    return {};
-}
-
-
 int main()
 {
-    optional<int> data1 { getData(true) };
-    optional<int> data2 { getData(false) };
-    println("data1.has_value = {}", data1.has_value());
-    if (data1.has_value()) {
-        println("data1.value = {}", data1.value());
-   }
-    if (!data2) {
-        println("data2 has no value."); 
-    }
-    try
     {
-        println("data2.value = {}", data2.value());
+        // Structured bindings with std::array.
+        array values{ 11, 22, 33 };
+		auto [x, y, z] {values};
+        println("x = {}, y = {}, z = {}", x, y, z);
     }
-    catch (const bad_optional_access& ex)
-    {
-        println("Exception: {}", ex.what());
-    }
-    println("data2.value = {}", data2.value_or(0));
 }
 
