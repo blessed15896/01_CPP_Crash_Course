@@ -7,8 +7,6 @@ export module AirlineTicket;
 export class AirlineTicket
 {
 public:
-	AirlineTicket() {}
-
 	double calculatePriceInDollars()
 	{
 		if (hasEliteSuperRewardsStatus()) { return 0; }
