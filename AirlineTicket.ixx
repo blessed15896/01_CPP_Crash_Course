@@ -1,5 +1,7 @@
 #include <string>
 
+using namespace std;
+
 export module AirlineTicket;
 
 export class AirlineTicket
@@ -13,8 +15,8 @@ public:
 		return getNumberOfMiles() * 0.1;
 	}
 
-	std::string getPassengerName() { return m_passengerName; }
-	void setPassengerName(std::string name) { m_passengerName = name; }
+	string getPassengerName() { return m_passengerName; }
+	void setPassengerName(string name) { m_passengerName = name; }
 
 	int getNumberOfMiles() { return m_numberOfMiles; }
 	void setNumberOfMiles(int miles) { m_numberOfMiles = miles; }
@@ -25,7 +27,7 @@ public:
 	}
 
 private:
-	std::string m_passengerName{ "Unknown Passenger" };
+	string m_passengerName{ "Unknown Passenger" };
 	int m_numberOfMiles{ 0 };
 	bool m_hasEliteSuperRewardsStatus{ false };
 };

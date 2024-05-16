@@ -8,7 +8,7 @@ int main()
 {
 	AirlineTicket myTicket;
 	myTicket.setPassengerName("Blessed Sibanda");
-	myTicket.setNumberOfMiles(700);
+	myTicket.setNumberOfMiles(400);
 	double cost{ myTicket.calculatePriceInDollars() };
 	println("The ticket will cost ${}", cost);
 }
