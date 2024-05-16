@@ -1,12 +1,29 @@
-#include <iostream>
-#include <print>
+#include <optional>;
+#include <print>;
+
+using namespace std;
+
+optional<int> getData(bool giveIt)
+{
+    if (giveIt) {
+        return 42;
+    }
+    return {};
+}
 
 
 int main()
 {
-    int value;
-    std::cin >> value;
-    std::println("You entered {}", value);
+    optional<int> data1 { getData(true) };
+    optional<int> data2 { getData(false) };
+    println("data1.has_value = {}", data1.has_value());
+    if (data1.has_value()) {
+        println("data1.value = {}", data1.value());
+   }
+    if (!data2) {
+        println("data2 has no value.");
+        println("data2.value = {} [default]", data2.value_or(0));
+    }
     return 0;
 }
 
